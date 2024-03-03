@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Col, Row } from 'react-bootstrap';
+
 import { emptyCart, removeFromCart } from '../redux/slices/cartSlice';
 
 function Cart() {
@@ -15,7 +15,7 @@ function Cart() {
     totalPrice = totalPrice + item.price
   });
 
-  const dispatch = useDispatch()
+const dispatch = useDispatch()
   const navigate = useNavigate()
   const handleCheckout = () => {
     alert("Successfully placed the order");
